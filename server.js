@@ -25,5 +25,5 @@ app.use(express.static('public'));
 
 // The listen() method is responsible for listening for incoming connections on the specified port 
 app.listen(PORT, () => {
-    console.log(`App listening at http://localhost:${PORT} 🚀`);
+    console.log(`Server running on http://localhost:${PORT} 🚀`);
 });
