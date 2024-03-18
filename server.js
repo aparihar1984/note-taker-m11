@@ -4,8 +4,8 @@ const express = require('express');
 const path = require('path');
 
 // Importing the feedback routers
-// const apiRoutes = require('./routes/apiRoutes');
-// const htmlRoutes = require('./routes/htmlRoutes');
+const apiRoutes = require('../routes/apiRoutes');
+const htmlRoutes = require('../routes/htmlRoutes');
 
 // Specifying on which port the Express.js server will run
 const PORT = 3001;
@@ -20,8 +20,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 // app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use(apiRoutes);
-// app.use(htmlRoutes);
+app.use(apiRoutes);
+app.use(htmlRoutes);
 
 // The listen() method is responsible for listening for incoming connections on the specified port 
 app.listen(PORT, () => {
