@@ -19,7 +19,6 @@ app.use(express.urlencoded({ extended: true }));
 
 // Middleware to serve up static assets from the public folder
 app.use(express.static('public'));
-// app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(apiRoutes);
 app.use(htmlRoutes);
